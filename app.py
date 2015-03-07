@@ -8,6 +8,9 @@ import views
 if __name__ == "__main__":
     config = Configurator()
 
+    config.include('pyramid_mako')
+    config.add_mako_renderer('.html')
+
     config.add_route('hello', '/')
     config.add_route('about', '/about')
     config.add_route('contact_page', '/contact')
