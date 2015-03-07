@@ -15,6 +15,8 @@ if __name__ == "__main__":
     config.add_route('hello', '/')
     config.add_route('about', '/about')
     config.add_route('contact_page', '/contact')
+    config.add_route('item', '/item/{item_id}')
+
     config.scan(views)
     config.scan(events)
 
