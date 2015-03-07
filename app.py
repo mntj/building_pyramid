@@ -3,6 +3,7 @@ from pyramid.config import Configurator
 from pyramid.response import Response
 
 import views
+import events
 
 
 if __name__ == "__main__":
@@ -15,6 +16,7 @@ if __name__ == "__main__":
     config.add_route('about', '/about')
     config.add_route('contact_page', '/contact')
     config.scan(views)
+    config.scan(events)
 
     app = config.make_wsgi_app()
     server = make_server('0.0.0.0', 5000, app)
